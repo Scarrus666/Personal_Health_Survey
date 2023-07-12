@@ -1,0 +1,131 @@
+body 
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.header 
+{
+    background-color: rgb(0, 191, 35);;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow:1px 1px 4px rgb(0, 0, 0);
+}
+
+.navbar 
+{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+}
+
+.navbar a 
+{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover 
+{
+    background-color: rgb(146, 163, 0);
+}
+
+.container 
+{
+    min-width: 85%;
+    max-width: 95%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25% 35px 35px 35px;
+    height: 100%;
+}
+
+h1 
+{
+    margin-top: 0;
+    color:rgb(146, 163, 0);
+    text-shadow: 1px 1px 4px #000000;
+}
+
+/* Additional styling for nutritional advice header */
+.header-title 
+{
+    font-size: 24px;
+    margin: 0;
+}
+
+.header-subtitle 
+{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.header-description 
+{
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Footer styles */
+.footer 
+{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) 
+{
+    .header-title 
+    {
+        font-size: 20px;
+    }
+
+    .header-subtitle 
+    {
+        font-size: 12px;
+    }
+
+    .header-description 
+    {
+        font-size: 10px;
+    }
+
+    .navbar 
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a 
+    {
+        margin: 5px;
+    }
+}
+
+img 
+{
+    max-width: 105px;
+    height: auto;
+    margin: 15px;
+    border-radius: 5px;
+    outline: 1px solid rgb(0, 191, 35);
+    padding: 5px;
+    background-color: white;
+}
+
