@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full-Screen Element Example</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: lightgray;
+      height: 60px;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: lightgray;
+      height: 40px;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    main {
+      height: calc(100% - 120px); /* Subtract the header and footer heights */
+      background-color: lightblue;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header content goes here -->
+    <h1>Header</h1>
+  </header>
+
+  <main>
+    <!-- Content of the full-screen element goes here -->
+    <h2>Main Content</h2>
+    <p>This is the main content area.</p>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+    <p>Footer</p>
+  </footer>
+</body>
+</html>
