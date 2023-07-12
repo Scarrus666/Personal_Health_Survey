@@ -12,11 +12,19 @@
 
     <?php
         include './header.php';
-        include './pageframe.php';
+        include './frame_start.php';
     ?>
 
 
+        <h1>Please take a Quiz</h1>
+        <p><br><br><br><br></p>
+        <p>This is some text</p>
+        <p><br><br><br><br></p>
+
+
+
     <?php
+        include './frame_end.php';
         include './footer.php';
     ?>
     

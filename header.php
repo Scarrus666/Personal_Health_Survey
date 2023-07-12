@@ -6,7 +6,9 @@
     </div>
     <!-- <h1 class="header-title">Nutritional Advice</h1> -->
 
+    <div>
     <img src="./images/logo_n.jpg" alt="Logo">
+    </div>
 
     <div class="navbar">
         <a href="#">Recipes</a>
