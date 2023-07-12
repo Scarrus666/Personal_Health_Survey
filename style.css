@@ -112,3 +112,10 @@ h1
         margin: 5px;
     }
 }
+
+img 
+{
+    max-width: 105px;
+    height: auto;
+    margin: min(10px, 10%);
+}
