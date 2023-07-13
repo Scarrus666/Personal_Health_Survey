@@ -17,8 +17,10 @@
 
 
         <h1>Please take a Quiz</h1>
-        <p><br><br><br><br></p>
-        <p>This is some text</p>
+        <p><br><br></p>
+        <h4 class="px-3">Please take the time to take our short Quiz.</h4>
+        <p class="px-3">It will help you evaluate your current and future health condition.</p>
+        <p><br><br></p>
 
 
     <?php
