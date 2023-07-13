@@ -13,12 +13,13 @@
     <?php
         include './header.php';
         include './frame_start.php';
+        include './title_frame.php';
     ?>
 
         <h1>Please take a Quiz</h1>
-        <p><br></p>
 
     <?php
+        include './title_frame_end.php';
         include './img_frame.php';
     ?>
 
@@ -29,12 +30,12 @@
         include './question_frame.php';
     ?>
 
-        
-
-
         <h4 class="px-3">Please take the time to take our short Quiz.</h4>
         <p class="px-3">It will help you evaluate your current and future health condition.</p>
-        <p><br><br></p>
+
+        <br><br>
+
+        <p class="px-3">How healthy are you physically</p>
 
     <?php
         include './question_frame_end.php';

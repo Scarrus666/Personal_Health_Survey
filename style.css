@@ -163,22 +163,21 @@ img
     padding-left: 8%;
     padding-right: 8%;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 
 .image
 {
-    max-width: 75%;
+    max-width: 50%;
     min-width: 25%;
     height: auto;
-    margin: 15px;
     border-radius: 5px;
     padding-left: 8%;
     padding-right: 8%;
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: white;
-    align-items: center;1
+    align-items: center;
 }
 
 .answer
@@ -188,4 +187,10 @@ img
     justify-content: space-between;
     align-items: center;
     width: 80%;
+}
+
+.title
+{
+    width: 100%;
+    padding-bottom: 5%;
 }
