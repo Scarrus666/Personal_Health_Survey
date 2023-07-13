@@ -15,15 +15,36 @@
         include './frame_start.php';
     ?>
 
-
         <h1>Please take a Quiz</h1>
-        <p><br><br></p>
+        <p><br></p>
+
+    <?php
+        include './img_frame.php';
+    ?>
+
+        <img src="./images/health.png" alt="health.png">
+
+    <?php
+        include './img_frame_end.php';
+        include './question_frame.php';
+    ?>
+
+        
+
+
         <h4 class="px-3">Please take the time to take our short Quiz.</h4>
         <p class="px-3">It will help you evaluate your current and future health condition.</p>
         <p><br><br></p>
 
+    <?php
+        include './question_frame_end.php';
+        include './answer_frame.php';
+    ?>
+
+        <p>slider</p>
 
     <?php
+        include './answer_frame_end.php';
         include './frame_end.php';
         include './footer.php';
     ?>
