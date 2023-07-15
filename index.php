@@ -17,9 +17,9 @@
 
         <h1>Please take a Quiz</h1>
 
-        <div class="image">
-            <img src="./images/health.png" alt="health.png">
-        </div>
+
+        <img class="image" src="./images/health.png" alt="health.png">
+
 
         <div class="question">
             <h4>Please take the time for our short Quiz.</h4>
@@ -32,8 +32,8 @@
             -->
         <div class="bar">
             <div class="progress">
-                <div class="progress-bar bartext" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 10%; text-align:center">
-                    PROGRESS
+                <div class="progress-bar bartext text-center" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                    <!-- PROGRESS -->
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
             <h5>How healthy are you physically?</h5><br>
 
             <div class="slidecontainer">
-                Not at all healthy<input type="range" min="1" max="5" value="3" class="slider" id="myRange">Extremely healthy
+                less<input type="range" min="1" max="5" value="3" class="slider" id="myRange">more
             </div>
 
         </div>

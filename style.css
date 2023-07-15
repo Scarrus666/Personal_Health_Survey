@@ -29,25 +29,27 @@ html, body
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0px;
-    width: 25%;
+    width: 75%;
+    height: auto;
 }
 
 .nav-right
 {
-    justify-content:flex-end;
+    justify-content: flex-end;
+    align-items:end;
+    margin-right: 5%;
 }
 
-.navbar a 
+.nav-right a 
 {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-    margin: 0 10px;
+    padding: 8px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.navbar a:hover 
+.nav-right a:hover 
 {
     background-color: rgb(138, 78, 0)
 }
@@ -136,33 +138,58 @@ h1
     }
 }
 
-img
+.qimage
 {
-    max-width: 75%;
-    min-width: 5%;
-    height: auto;
-    border-radius: 5px;
-    background-color: white;
+    width: auto;
+    height: 87%;
     align-items: center;
+    border-style: solid;
+    border-image-width: 10px;
+    border-color: white;
+    border-radius: 5px;
+    margin: 5px;
+    justify-content: flex-start;
 }
 
-#img-logo
-{
-    margin: 15px;
-}
 
-.img-logo
-{
-    padding: 2.5%;
-}
 
 .logo
 {
-    max-width: 150px;
-    min-width: 25px;
-    height: auto;
+    width: 12%;
+    height: 87%;
     margin: 5px;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.image
+{
+
+        max-width: 50%;
+        min-width: 25%;
+        height: auto;
+        align-items: center;
+        border-style: solid;
+        border-image-width: 10px;
+        border-color: white;
+        border-radius: 5px;
+        margin-top: 8%;
+        margin-left: 8%;
+        justify-content: flex-start;
+
+}
+
+.responsive
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
 }
 
 .question
@@ -176,18 +203,6 @@ img
     width: 85%;
     background-color: white;
 
-}
-
-.image
-{
-    max-width: 50%;
-    min-width: 25%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 8%;
-    margin-left: 8%;
-    background-color: white;
-    text-align: left;
 }
 
 .answer
@@ -268,6 +283,8 @@ img
 
   .bar
   {
+    max-width: 100;
+    min-width: 50%;
     align-items: center;
     text-align: center;
   }
