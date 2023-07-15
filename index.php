@@ -13,39 +13,43 @@
     <?php
         include './header.php';
         include './frame_start.php';
-        include './title_frame.php';
     ?>
 
         <h1>Please take a Quiz</h1>
 
+        <div class="image">
+            <img src="./images/health.png" alt="health.png">
+        </div>
+
+        <div class="question">
+            <h4>Please take the time for our short Quiz.</h4>
+            <p>It will help you evaluate your current and future health condition.</p>
+
+            <br><br>
+
+            <!-- This is the old simple progress bar
+            <progress id="quiz" value="0" max="10"></progress><br>
+            -->
+        <div class="bar">
+            <div class="progress">
+                <div class="progress-bar bartext" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 10%; text-align:center">
+                    PROGRESS
+                </div>
+            </div>
+        </div>
+
+            <br>
+            <h5>How healthy are you physically?</h5><br>
+
+            <div class="slidecontainer">
+                Not at all healthy<input type="range" min="1" max="5" value="3" class="slider" id="myRange">Extremely healthy
+            </div>
+
+        </div>
+
+
+
     <?php
-        include './title_frame_end.php';
-        include './img_frame.php';
-    ?>
-
-        <img src="./images/health.png" alt="health.png">
-
-    <?php
-        include './img_frame_end.php';
-        include './question_frame.php';
-    ?>
-
-        <h4 class="px-3">Please take the time to take our short Quiz.</h4>
-        <p class="px-3">It will help you evaluate your current and future health condition.</p>
-
-        <br><br>
-
-        <p class="px-3">How healthy are you physically</p>
-
-    <?php
-        include './question_frame_end.php';
-        include './answer_frame.php';
-    ?>
-
-        <p>slider</p>
-
-    <?php
-        include './answer_frame_end.php';
         include './frame_end.php';
         include './footer.php';
     ?>
