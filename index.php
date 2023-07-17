@@ -12,8 +12,8 @@
 
     <?php
         include './header.php';
-        include './survey_q7.php';
-    ?>
+        include './survey_start.php';
+    ?> 
 
     <?php
         include './footer.php';
