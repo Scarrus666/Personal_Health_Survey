@@ -18,12 +18,13 @@
 
         <h1>Please take a Quiz</h1>
         <p><br><br><br><br></p>
-        <p>This is some text</p>
+        <p>This is some text</p>gi
         <p><br><br><br><br></p>
 
 
 
     <?php
+    
         include './frame_end.php';
         include './footer.php';
     ?>

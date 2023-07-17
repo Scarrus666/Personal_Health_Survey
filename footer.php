@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>&copy; 2023 Nutritional Advice. All rights reserved. | Contact: info@nutritionaladvice.com | Date: <span id="currentDate"></span></p>
+    <p>&copy; §| Date: <span id="currentDate"></span></p>
   </footer>
 
   <script>
