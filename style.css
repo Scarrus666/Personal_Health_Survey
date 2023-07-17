@@ -44,7 +44,7 @@ html, body
 {
     color: #fff;
     text-decoration: none;
-    padding: 8px;
+    padding: 4.5px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -140,7 +140,7 @@ h1
 
 .qimage
 {
-    width: auto;
+    max-width: 27%;
     height: 87%;
     align-items: center;
     border-style: solid;
@@ -283,8 +283,16 @@ h1
 
   .bar
   {
-    max-width: 100;
-    min-width: 50%;
+    width: 100;
     align-items: center;
     text-align: center;
   }
+
+canvas 
+{
+    border: 1px solid #e3e9ec;
+    width: 100%;
+    height: 22px;
+    border-radius: 8px;
+    color: rgb(42, 118, 248);
+}
