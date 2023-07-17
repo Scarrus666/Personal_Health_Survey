@@ -61,6 +61,8 @@
                     <input type="checkbox" id="physicalActivity10" name="answ10" value="Boat">
                     <label for="physicalActivity10"> Team sports</label><br>
 
+                    <textarea type="checkbox" id="physicalActivity11" name="answ11" rows="1" cols="25"></textarea><br><br>
+
                 </div>
             </div>
 

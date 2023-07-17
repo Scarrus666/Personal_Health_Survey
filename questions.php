@@ -9,44 +9,48 @@ $questions = array(
         "max" => 5
     ),
     array(
-        "questionText" => "Do you take nutritional supplements?",
+        "question-text" => "Do you take nutritional supplements?",
         "type" => "boolean",
         "labels" => array("Yes", "No"),
     ),
     array(
-        "questionText" => "How important is physical activity to you?",
-        "type" => "rangeSlider",
+        "question-text" => "How important is physical activity to you?",
+        "type" => "range",
         "labels" => array("Not at all", "Very"),
         "min" => 0,
         "max" => 5
     ),
     array(
-        "questionText" => "Welche zusätzliche körperliche Aktivität betreibst du am meisten?",
-        "type" => "multiplechoice",
-        "labels" => array("Gewichte heben", "gehen", "Joggen", "Radfahren", "Schwimmen", "Tanzen", "Pilates", "Aerobics"),
+        "question-text" => "What additional physical activity do you do most?",
+        "type" => "checkbox",
+        "labels" => array("Lifting weights", "Walking", "Jogging", "Running", "Swimming", "Dancing", "Aerobics", "Pilates", "Team sports", "Other"),
     ),
     array(
-        "questionText" => "Hast du das Gefühl, zu wenig, genügend oder viel zu viel zusätzliche körperliche Aktivitäten zu betreiben?",
-        "type" => "rangeSlider",
-        "labels" => array("ungesund", "s", ""),
+        "question-text" => "Do you feel you do too little, just enough or way too much additional physical activity?",
+        "type" => "range",
+        "labels" => array("Far too little", "just right", "far too much"),
         "min" => 0,
         "max" => 5
     ),
     array(
-        "questionText" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Kohlenhydrate?",
-        "type" => "eingabefeld Zahl",
+        "question-text" => "On a typical day, how many of your meals or snacks contain carbohydrates?",
+        "type" => "number",
     ),
     array(
-        "questionText" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Proteine?",
-        "type" => "eingabefeld Zahl",
+        "question-text" => "On a typical day, how many of your meals or snacks contain protein?",
+        "type" => "number",
     ),
     array(
-        "questionText" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Gemüse?",
-        "type" => "eingabefeld Zahl",
+        "question-text" => "On a typical day, how many of your meals or snacks contain vegetables?",
+        "type" => "number",
     ),
     array(
-        "questionText" => "An einem typischen Tag: Wie viele deiner Malze",
-        "type" => "eingabefeld Zahl",
+        "question-text" => "On a typical day, how many of your meals or snacks contain fruit?",
+        "type" => "number",
+    ),
+    array(
+        "question-text" => "On a typical day, how many of your meals are microwaved or prepared?",
+        "type" => "number",
     )
 );
 
