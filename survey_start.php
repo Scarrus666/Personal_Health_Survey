@@ -48,7 +48,7 @@
             ctx.imageSmoothingEnabled = false;
 
             // Define progress variables
-            var progress = 10;
+            var progress = 0;
             var totalProgress = 100;
 
             // Animate the progress bar

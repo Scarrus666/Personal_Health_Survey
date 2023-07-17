@@ -12,7 +12,7 @@
 
     <?php
         include './header.php';
-        include './survey_q6.php';
+        include './survey_q7.php';
     ?>
 
     <?php
