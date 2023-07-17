@@ -12,7 +12,6 @@
 
     <?php
         include './header.php';
-        // include './survey_start.php';
         include './template-range-slider-draft.php';
     ?> 
 

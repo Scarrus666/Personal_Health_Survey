@@ -1,12 +1,14 @@
 <?php
 
-$questions = array(
+define("QUESTIONS", array(
     array(
         "question-text" => "How healthy are you physically?",
         "type" => "range",
         "labels" => array("Not at all healthy", "Extremely healthy"),
         "min" => 0,
-        "max" => 5
+        "max" => 5,
+        "step" => 1,
+        "value" => -1,
     ),
     array(
         "question-text" => "Do you take nutritional supplements?",
@@ -18,7 +20,7 @@ $questions = array(
         "type" => "range",
         "labels" => array("Not at all", "Very"),
         "min" => 0,
-        "max" => 5
+        "max" => 5,
     ),
     array(
         "question-text" => "What additional physical activity do you do most?",
@@ -30,7 +32,7 @@ $questions = array(
         "type" => "range",
         "labels" => array("Far too little", "just right", "far too much"),
         "min" => 0,
-        "max" => 5
+        "max" => 5,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain carbohydrates?",
@@ -51,6 +53,7 @@ $questions = array(
     array(
         "question-text" => "On a typical day, how many of your meals are microwaved or prepared?",
         "type" => "number",
+    )
     )
 );
 
