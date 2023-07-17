@@ -29,9 +29,15 @@
         <br>
         <h5>How healthy are you physically?</h5><br>
 
-        <div class="slidecontainer">
-            less<input type="range" min="1" max="5" value="3" class="slider" id="myRange">more
-        </div>
+        <form action="./index.php">
+
+            <div class="slidecontainer">
+                less<input type="range" min="1" max="5" value="3" class="slider" id="q1">more
+            </div>
+
+            <input type="submit" value="Ok">
+
+        </form>
 
         <script>
             // Get the canvas element
@@ -42,7 +48,7 @@
             ctx.imageSmoothingEnabled = false;
 
             // Define progress variables
-            var progress = 50;
+            var progress = 10;
             var totalProgress = 100;
 
             // Animate the progress bar

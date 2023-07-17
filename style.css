@@ -221,8 +221,6 @@ h1
     padding-bottom: 5%;
 }
 
-
-
 .slidecontainer 
 {
     width: 100%; /* Width of the outside container */
@@ -295,4 +293,33 @@ canvas
     height: 22px;
     border-radius: 8px;
     color: rgb(42, 118, 248);
+}
+
+.split
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.leftrow
+{
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.rightrow
+{
+    justify-content: flex-end;
+    width: 50%;
+}
+
+#carbohydrates
+{
+    width: 60px;
+}
+
+input
+{
+    border-radius: 40%;
+    padding: 8px;
 }

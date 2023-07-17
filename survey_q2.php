@@ -8,14 +8,7 @@
 
 
     <div class="question">
-        <h4>Please take the time for our short Quiz.</h4>
-        <p>It will help you evaluate your current and future health condition.</p>
 
-        <br><br>
-
-        <!-- This is the old simple progress bar
-        <progress id="quiz" value="0" max="10"></progress><br>
-        -->
         <div class="bar">
             <!--
             <div class="progress">
@@ -27,11 +20,18 @@
         </div>
 
         <br>
-        <h5>How healthy are you physically?</h5><br>
+        <h5>Do you take nutritional supplements?</h5><br>
 
-        <div class="slidecontainer">
-            less<input type="range" min="1" max="5" value="3" class="slider" id="myRange">more
-        </div>
+        <form action="./index.php">
+
+            <input type="radio" id="yes" name="supplements" value="YES">
+            <label for="YES">YES</label><br>
+            <input type="radio" id="no" name="supplements" value="NO">
+            <label for="NO">NO</label><br>
+
+            <input type="submit" value="Ok">
+
+        </form>
 
         <script>
             // Get the canvas element
@@ -42,7 +42,7 @@
             ctx.imageSmoothingEnabled = false;
 
             // Define progress variables
-            var progress = 50;
+            var progress = 20;
             var totalProgress = 100;
 
             // Animate the progress bar
