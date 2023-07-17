@@ -12,19 +12,10 @@
 
     <?php
         include './header.php';
-        include './frame_start.php';
+        include './survey_q7.php';
     ?>
 
-
-        <h1>Please take a Quiz</h1>
-        <p><br><br></p>
-        <h4 class="px-3">Please take the time to take our short Quiz.</h4>
-        <p class="px-3">It will help you evaluate your current and future health condition.</p>
-        <p><br><br></p>
-
-
     <?php
-        include './frame_end.php';
         include './footer.php';
     ?>
     
