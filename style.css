@@ -1,14 +1,17 @@
-body 
+html, body 
 {
-    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(15px + 0.390625vw);
 }
 
 .header 
 {
-    background-color: rgb(0, 191, 35);;
+    background-color: rgb(0, 191, 35);
     color: #fff;
     padding: 1px;
     text-align: center;
@@ -16,6 +19,9 @@ body
     justify-content: space-between;
     align-items: center;
     text-shadow:1px 1px 4px rgb(0, 0, 0);
+    max-height: 125px;
+    min-height: 10%;
+    width: 100%;
 }
 
 .navbar 
@@ -23,21 +29,29 @@ body
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0px;
+    width: 75%;
+    height: auto;
 }
 
-.navbar a 
+.nav-right
+{
+    justify-content: flex-end;
+    align-items:end;
+    margin-right: 5%;
+}
+
+.nav-right a 
 {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-    margin: 0 10px;
+    padding: 4.5px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.navbar a:hover 
+.nav-right a:hover 
 {
-    background-color: rgb(146, 163, 0);
+    background-color: rgb(138, 78, 0)
 }
 
 .container 
@@ -46,15 +60,18 @@ body
     max-width: 95%;
     margin: 20px auto;
     background-color: #ffffff;
-    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 25% 35px 35px 35px;
-    height: 100%;
+    /*border-radius: calc(175px + 0.390625vw) 35px 35px 35px;*/
+    border-top-left-radius: calc(185px + 0.390625vw) calc(135px + 0.390625vw);
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    flex: 1;
 }
 
 h1 
 {
-    margin-top: 0;
+    margin-top: 20px;
     color:rgb(146, 163, 0);
     text-shadow: 1px 1px 4px #000000;
 }
@@ -86,6 +103,9 @@ h1
     padding: 10px;
     text-align: center;
     font-size: 12px;
+    margin-bottom: -50px;
+    width: 100%;
+    max-height: 15%;
 }
 
 /* Responsive styles */
@@ -118,14 +138,195 @@ h1
     }
 }
 
-img 
+.qimage
 {
-    max-width: 105px;
-    height: auto;
-    margin: 15px;
+    max-width: 27%;
+    height: 87%;
+    align-items: center;
+    border-style: solid;
+    border-image-width: 10px;
+    border-color: white;
     border-radius: 5px;
-    outline: 1px solid rgb(0, 191, 35);
-    padding: 5px;
-    background-color: white;
+    margin: 5px;
+    justify-content: flex-start;
 }
 
+
+
+.logo
+{
+    width: 12%;
+    height: 87%;
+    margin: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.image
+{
+
+        max-width: 50%;
+        min-width: 25%;
+        height: auto;
+        align-items: center;
+        border-style: solid;
+        border-image-width: 10px;
+        border-color: white;
+        border-radius: 5px;
+        margin-top: 8%;
+        margin-left: 8%;
+        justify-content: flex-start;
+
+}
+
+.responsive
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.question
+{
+    text-align: left;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    align-items: center;
+    width: 85%;
+    background-color: white;
+
+}
+
+.answer
+{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: black;
+}
+
+.title
+{
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.slidecontainer 
+{
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider 
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 25%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover 
+  {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+  .slider::-webkit-slider-thumb 
+  {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgb(0, 191, 35); /* Green background */
+    border-radius: 50%;
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb 
+  {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 25%;
+  }
+
+  .bartext
+  {
+    font-size: xx-small;
+  }
+
+  .progress
+  {
+    width: 100%;
+  }
+
+  .bar
+  {
+    width: 100;
+    align-items: center;
+    text-align: center;
+  }
+
+canvas 
+{
+    border: 1px solid #e3e9ec;
+    width: 100%;
+    height: 22px;
+    border-radius: 8px;
+    color: rgb(42, 118, 248);
+}
+
+.split
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.leftrow
+{
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.rightrow
+{
+    justify-content: flex-end;
+    width: 50%;
+}
+
+input[type=number]
+{
+    width: 50px;
+}
+
+input
+{
+    border-radius: 5%;
+}
+
+/* Works for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}

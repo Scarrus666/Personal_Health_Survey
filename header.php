@@ -1,19 +1,13 @@
 <div class="header">
-    <div class="navbar">
-      <a href="#" class="active">Home</a>
-      <a href="#">Articles</a>
 
-    </div>
-    <!-- <h1 class="header-title">Nutritional Advice</h1> -->
+  <img class="qimage" src="./images/logo_n.jpg" alt="Logo">
 
-    <div>
-    <img src="./images/logo_n.jpg" alt="Logo">
-    </div>
+  <!-- <h1 class="header-title">Nutritional Advice</h1> -->
 
-    <div class="navbar">
-        <a href="#">Recipes</a>
-        <a href="#">About</a>
-    </div>
+  <div class="nav-right">
+      <a href="#">Previous</a>
+      <a href="#" class="active">Start Survey</a>
+  </div>
 </div>
 
 
