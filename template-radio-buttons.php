@@ -90,6 +90,7 @@
             // This can be included by calling it up with php - 
             // make a bunch of different sites each with a different progress value -
             // then call up based on the question number
+            // !! Make animation bar change color according to progress/question number
             // Get the canvas element
             var canvas = document.getElementById("progressCanvas");
             var ctx = canvas.getContext("2d");

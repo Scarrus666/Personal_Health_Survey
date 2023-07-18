@@ -7,11 +7,11 @@
 $questions = array(
     array(
         "question-text" => "How healthy are you physically?",
-        "instruction" => "Rate your overall physical health from a range of 1 to 5",
+        "instruction" => "Rate your overall physical health",
         "type" => "range",
-        "labels" => array("Not at all healthy", "OK-ish", "Extremely healthy"),
+        "labels" => array("Not at all healthy", /*"OK-ish",*/ "Extremely healthy"),
         "min" => 0,
-        "max" => 5,
+        "max" => 4,
         "step" => 1,
         "value" => -1,
     ),
