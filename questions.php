@@ -1,10 +1,14 @@
 <?php
 
-define("QUESTIONS", array(
+// optionally you could also write:
+// define("QUESTIONS", array(
+// in contrast
+$questions = array(
     array(
         "question-text" => "How healthy are you physically?",
+        "instruction" => "Test your overall health with this great test!",
         "type" => "range",
-        "labels" => array("Not at all healthy", "Extremely healthy"),
+        "labels" => array("Not at all healthy", "OK-ish", "Extremely healthy"),
         "min" => 0,
         "max" => 5,
         "step" => 1,
@@ -18,7 +22,7 @@ define("QUESTIONS", array(
     array(
         "question-text" => "How important is physical activity to you?",
         "type" => "range",
-        "labels" => array("Not at all", "Very"),
+        "labels" => array("Not at all", "a bit", "Very"),
         "min" => 0,
         "max" => 5,
     ),
@@ -54,7 +58,10 @@ define("QUESTIONS", array(
         "question-text" => "On a typical day, how many of your meals are microwaved or prepared?",
         "type" => "number",
     )
-    )
 );
+
+
+// Array wird als globale Konstante definiert
+define("QUESTIONS",$questions);
 
 ?>
