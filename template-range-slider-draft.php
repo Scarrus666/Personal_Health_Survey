@@ -93,7 +93,7 @@
             </div>
             <input type="hidden" name="questionIndex" value='<?php echo $data["questionIndex"]; ?>'>
             <p id="validation-warning" class="warning"></p>
-            <button type="submit" class="btn btn-primary">Next</button>
+            <button type="submit" class="btn btn-primary next">Next</button>
 
             <p class="spacer"></p>
         </form>

@@ -331,3 +331,19 @@ input::-webkit-inner-spin-button
     margin: 0;
 }
 
+.next
+{
+    float: right;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+/* for 'previous' button, left of 'next'
+/* unused */
+.previous
+{
+    float: left;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
