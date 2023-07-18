@@ -11,6 +11,11 @@
 </head>
 <body>
 
+    <script>
+        session_start();
+        session_destroy();
+    </script>
+
     <?php
         include './header.php';
         // include './survey_start.php';
