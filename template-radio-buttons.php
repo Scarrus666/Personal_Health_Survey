@@ -2,7 +2,7 @@
     include './questions.php';
     include './tools.php';
 
-        // Hole die Laufnummer der letzten Frage aus $_POST.
+    // Hole die Laufnummer der letzten Frage aus $_POST.
     // Benötigt <input type="hidden" name="questionIndex" value="0">
     // im <form> Tag
     
@@ -76,9 +76,20 @@
             <p class="spacer"></p>
         </form>
 
+<!--
+        <?php
+            $barAnim = $questionIndex;
+            printf("<script type='text/javascript' src='baranim-", $barAnim, ".js></script>");
+            printf("This is a test");
+        ?>
+-->
+
+
         <script>
             // This is the Javascript for the Slider Animation
-
+            // This can be included by calling it up with php - 
+            // make a bunch of different sites each with a different progress value -
+            // then call up based on the question number
             // Get the canvas element
             var canvas = document.getElementById("progressCanvas");
             var ctx = canvas.getContext("2d");
@@ -87,8 +98,8 @@
             ctx.imageSmoothingEnabled = false;
 
             // Define progress variables
-            var progress = 10;
-            var totalProgress = 100;
+            var progress = <?php echo "$questionIndex"; ?>;
+            var totalProgress = 10;
 
             // Animate the progress bar
             function animateProgressBar() 
@@ -145,6 +156,7 @@
                 }
             );
         </script>
+
 
     </div>
 
