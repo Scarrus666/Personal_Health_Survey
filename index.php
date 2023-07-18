@@ -12,14 +12,13 @@
 
     <?php
         include './header.php';
-        include './mainpage_start.php';
         // include './survey_start.php';
-        include './template-range-slider-draft.php';
+        // include './template-range-slider-draft.php';
+        include './template-radio-buttons.php';
     ?> 
 
     <?php
         include './footer.php';
-        include './mainpage_end.php';
     ?>
     
 </body>

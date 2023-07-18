@@ -1,9 +1,8 @@
 <?php
-
     include './questions.php';
     include './tools.php';
 
-    // Hole die Laufnummer der letzten Frage aus $_POST.
+        // Hole die Laufnummer der letzten Frage aus $_POST.
     // Benötigt <input type="hidden" name="questionIndex" value="0">
     // im <form> Tag
     
@@ -19,13 +18,12 @@
 
 
     // Setze die Laufnummer auf die nächste Frage.
-    $questionIndex = $questionIndex + 1;
+    $questionIndex = $questionIndex + 2;
     
 
     // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
     $data = QUESTIONS[$questionIndex];
     // prettyPrint($data);
-
 ?>
 
 <div class="container">
@@ -36,8 +34,6 @@
     <img class="image" src="./images/health.jpg" alt="health.jpg">
 
     <div class="question">
-    <h4>Please take the time for our short Quiz.</h4>
-        <p>It will help you evaluate your current and future health condition.</p>
 
         <br><br>
 
@@ -45,7 +41,7 @@
 
         <?php
             $questionPrint = $questionIndex + 1;
-            echo "<h5>Question $questionPrint</h5>";
+            echo "<h7>Question $questionPrint</h7>";
         ?>
 
         <div class="bar">
@@ -57,37 +53,28 @@
             -->
             <canvas id="progressCanvas"></canvas>
         </div>
-   
- <!--       <h5>Question <?php echo "$questionIndex + 1"; ?></h5> -->
 
         <h3><?php echo $data["question-text"]; ?></h3>
-        <form action="question-2.php" method="post" onsubmit="return validateRange('range-slider');">
-            <p class="instruction"><?php echo $data["instruction"]; ?></p>
 
-            <div class="row flex-nowrap" style="padding-left: 16%">
-                <div class="col">
-                    <p><?php echo $data["labels"][0]; ?></p>
-                </div>
-                <div class="col" style="text-align: center;">
-                    <p><?php echo $data["labels"][1]; ?></p>
-                </div>
-                <div class="col" style="text-align: right;">
-                    <p><?php echo $data["labels"][2]; ?></p>
-                </div>
+        <form action="question.php" method="post" onsubmit="return validateRadios('single-choice');">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="single-choice" id="single-choice-0" value="0">
+                <label class="form-check-label" for="single-choice-0">
+                    <p><?php echo $data["values"][0]; ?></p>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="single-choice" id="single-choice-1" value="1">
+                <label class="form-check-label" for="single-choice-1">
+                    <p><?php echo $data["values"][1]; ?></p>
+                </label>
             </div>
 
-            <input type="range" name="range-slider" id="range-slider" class="form-range"
-                    min="<?php echo $data["min"]; ?>"
-                    max="<?php echo $data["max"]; ?>"
-                    step="<?php echo $data["step"]; ?>"
-                    value="<?php echo $data["value"]; ?>">
             <input type="hidden" name="questionIndex" value='<?php echo $data["questionIndex"]; ?>'>
-            <p id="validation-warning" class="warning"></p>
+            <p id="validate-warning" class="warning"></p>
             <button type="submit" class="btn btn-primary">Next</button>
-
             <p class="spacer"></p>
         </form>
-
 
         <script>
             // This is the Javascript for the Slider Animation
@@ -100,7 +87,7 @@
             ctx.imageSmoothingEnabled = false;
 
             // Define progress variables
-            var progress = 0;
+            var progress = 10;
             var totalProgress = 100;
 
             // Animate the progress bar
@@ -162,5 +149,4 @@
     </div>
 
 </div>
-
 

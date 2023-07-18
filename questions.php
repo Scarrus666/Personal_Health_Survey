@@ -2,11 +2,12 @@
 
 // optionally you could also write:
 // define("QUESTIONS", array(
-// in contrast
+// does the same thing as below
+
 $questions = array(
     array(
         "question-text" => "How healthy are you physically?",
-        "instruction" => "Test your overall health with this great test!",
+        "instruction" => "Rate your overall physical health from a range of 1 to 5",
         "type" => "range",
         "labels" => array("Not at all healthy", "OK-ish", "Extremely healthy"),
         "min" => 0,
@@ -16,8 +17,8 @@ $questions = array(
     ),
     array(
         "question-text" => "Do you take nutritional supplements?",
-        "type" => "boolean",
-        "labels" => array("Yes", "No"),
+        "type" => "radio",
+        "values" => array("Yes", "No"),
     ),
     array(
         "question-text" => "How important is physical activity to you?",
@@ -62,6 +63,7 @@ $questions = array(
 
 
 // Array wird als globale Konstante definiert
+// Here the Array is defined as a global constant
 define("QUESTIONS",$questions);
 
 ?>
