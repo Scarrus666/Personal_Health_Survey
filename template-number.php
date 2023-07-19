@@ -37,13 +37,12 @@
         </div>
 
         <h3><?php echo $data["question-text"]; ?></h3>
+        <div id="errorMsg" class="alert-message"></div><br>
 
         <form action="<?php echo $data["action"]; ?>" id="form" method="post" onsubmit="validateNumber()">
 
                 <input type="number" id="number" name="number"><br><br>
                 <label for="number"></label>
-                <div id="numberIncorrect" class="alert-message"></div><br>
-
 
             <input type="hidden" name="questionIndex" value='<?php echo $data["questionIndex"]; ?>'>
             <p id="validate-warning" class="warning"></p>
@@ -58,10 +57,10 @@
     function validateNumber()
         {
             if (document.getElementById("number").value < 0 || document.getElementById("number").value > 6)
-            {
-                event.preventDefault();
-                document.getElementById("numberIncorrect").innerHTML = "Please enter something realistic";
-            }
+                {
+                    event.preventDefault();
+                    document.getElementById("errorMsg").innerHTML = "We are sorry, please try to introduce another number.";
+                }
         }
 
     </script>

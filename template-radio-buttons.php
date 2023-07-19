@@ -36,6 +36,7 @@
         </div>
 
         <h3><?php echo $data["question-text"]; ?></h3>
+        <div id="errorMsg" class="alert-message"></div><br>
 
         <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateRadios('single-choice');">
             <div class="form-check">
@@ -66,6 +67,28 @@
 -->
 
     </div>
+
+    <script type="text/javascript">
+
+    function validateRadios(radioGroupName) 
+        {
+            const radioGroup = document.getElementsByName(radioGroupName);
+
+            for (let i = 0; i < radioGroup.length; i++) 
+                {
+                    if (radioGroup[i].checked) 
+                    {
+                        // At least one radio button is checked, so the selection is valid
+                        return true;
+                    }
+                }
+
+            // If no radio button is checked, show an error message or take appropriate action
+            document.getElementById("errorMsg").innerHTML = "We are sorry, it seems you have not selected anything.";;
+            return false; // Prevent form submission
+        }
+
+    </script>
 
 </div>
 

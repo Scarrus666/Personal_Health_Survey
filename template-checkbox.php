@@ -26,18 +26,13 @@
         ?>
 
         <div class="bar">
-            <!--
-            <div class="progress">
-                <div class="progress-bar bartext text-center" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-                </div>
-            </div>
-            -->
             <canvas id="progressCanvas"></canvas>
         </div>
 
         <br>    
 
         <h3><?php echo $data["question-text"]; ?></h3>
+        <div id="errorMsg" class="alert-message"></div><br>
 
         <br>
 
@@ -60,4 +55,29 @@
         </form>
 
     </div>
+
+    <script>
+    function validateCheckboxes() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        let isAtLeastOneChecked = false;
+
+        for (const checkbox of checkboxes) {
+            if (checkbox.checked) {
+                isAtLeastOneChecked = true;
+                break;
+            }
+        }
+
+        if (!isAtLeastOneChecked) {
+            const validationWarning = document.getElementById('errorMsg');
+            validationWarning.textContent = 'Please select at least one option.';
+            return false; // Prevent form submission
+        } else {
+            const validationWarning = document.getElementById('errorMsg');
+            validationWarning.textContent = null;
+            return true; // Allow form submission
+        }
+    }
+</script>
+
 </div>

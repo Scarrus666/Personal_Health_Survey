@@ -42,10 +42,12 @@
         <br>
         
         <h3><?php echo $data["question-text"]; ?></h3>
-        <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateRange('range-slider');">
+        <form action="<?php echo $data["action"]; ?>" id="form" method="post" onsubmit="validateRange()">
             <p class="instruction"><?php echo $data["instruction"]; ?></p>
 
             <br>
+            <div id="errorMsg" class="alert-message"></div><br>
+
 
 <!--
             <div class="row flex-nowrap" style="padding-left: 16%">
@@ -77,10 +79,33 @@
             <p class="spacer"></p>
         </form>
 
-
-        
-
     </div>
+
+    <script>
+    function validateRange() 
+        {
+            const rangeSlider = document.getElementById('range-slider');
+            const minValue = <?php echo $data["min"]; ?>;
+            const maxValue = <?php echo $data["max"]; ?>;
+            const selectedValue = parseInt(rangeSlider.value);
+
+            // Perform the validation
+            if (selectedValue < minValue || selectedValue > maxValue) 
+                {
+                    const validationWarning = document.getElementById('validation-warning');
+                    validationWarning.textContent = 'Please select a value within the valid range.';
+                    return false; // Prevent form submission
+                } 
+
+            else 
+                {
+                    // If the value is valid, clear any previous validation warnings
+                    const validationWarning = document.getElementById('validation-warning');
+                    validationWarning.textContent = '';
+                    return true; // Allow form submission
+                }
+        }
+    </script>
 
 </div>
 
