@@ -53,22 +53,27 @@ $questions = array(
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain carbohydrates?",
         "type" => "number",
+        "value" => null,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain protein?",
         "type" => "number",
+        "value" => null,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain vegetables?",
         "type" => "number",
+        "value" => null,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain fruit?",
         "type" => "number",
+        "value" => null,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals are microwaved or prepared?",
         "type" => "number",
+        "value" => null,
     )
 );
 

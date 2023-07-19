@@ -41,7 +41,7 @@
 
         <form action="<?php echo $data["action"]; ?>" id="form" method="post" onsubmit="validateNumber()">
 
-                <input type="number" id="number" name="number"><br><br>
+                <input type="number" id="number" name="number" value="<?php echo $data["value"]; ?>"><br><br>
                 <label for="number"></label>
 
             <input type="hidden" name="questionIndex" value='<?php echo $data["questionIndex"]; ?>'>
@@ -56,11 +56,19 @@
 
     function validateNumber()
         {
-            if (document.getElementById("number").value < 0 || document.getElementById("number").value > 6)
+            let number = document.getElementById("number").value;
+
+            if (number < 0 || number > 6)
                 {
                     event.preventDefault();
                     document.getElementById("errorMsg").innerHTML = "We are sorry, please try to introduce another number.";
                 }
+
+            else if (typeof number != 'number')
+            {
+                event.preventDefault();
+                document.getElementById("errorMsg").innerHTML = "We are sorry, please try to introduce a number.";
+            }
         }
 
     </script>
