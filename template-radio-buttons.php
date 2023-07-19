@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     // include './questions.php';
     include './tools.php';
 
@@ -37,7 +39,7 @@
 
         <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateRadios('single-choice');">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="single-choice" id="single-choice-0" value="0">
+                <input class="form-check-input" type="radio" name="response" id="single-choice-0" value="0">
                 <label class="form-check-label" for="single-choice-0">
                     <p><?php echo $data["values"][0]; ?></p>
                 </label>

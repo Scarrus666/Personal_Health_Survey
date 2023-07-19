@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     // include './questions.php';
     include './tools.php';
 

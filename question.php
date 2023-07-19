@@ -12,10 +12,10 @@
 <body>
 
     <?php
-        session_start();
+        // session_start();
         // session_destroy();
 
-        include './data-collector.php';
+        // include './data-collector.php';
         include './header.php';
         include './question-template-switch.php';
         include './progressbar.php';

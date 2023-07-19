@@ -11,18 +11,30 @@
 </head>
 <body>
 
-    <script>
-        session_start();
-        session_destroy();
-    </script>
-
     <?php
+        // Start or resume the session
+        session_start();
+
+        // Retrieve the saved responses from the session
+        $responses = $_SESSION['responses'];
+
         //include './data-collector.php';
+        include './questions.php';
         include './header.php';
         include './progressbar.php';
     ?>
 
     <?php
+
+        foreach ($responses as $questionIndex => $response) 
+            {
+                $question = $questions[$questionIndex];
+                $questionText = $question['question-text'];
+            
+                echo "Question: $questionText<br>";
+                echo "Answer: $response<br>";
+                echo "<br>";
+            }
 
     ?>
 

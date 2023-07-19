@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     // include './questions.php';
     include './tools.php';
 
@@ -37,8 +39,8 @@
 
         <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateNumber();">
 
-                <input type="number" id="number" name="number"><br><br>
-                <label for="number">This is the label</label>
+                <input type="number" id="number" name="response"><br><br>
+                <label for="number"></label>
 
 
             <input type="hidden" name="questionIndex" value='<?php echo $data["questionIndex"]; ?>'>
