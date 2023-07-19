@@ -9,7 +9,7 @@
     ctx.imageSmoothingEnabled = false;
 
     // Define progress variables
-    var progress = <?php     echo $data["questionIndex"]; ?>;
+    var progress = <?php     echo $data["questionIndex"] + 1; ?>;
     var totalProgress = 10;
 
     // Animate the progress bar
@@ -56,7 +56,18 @@
 
         // Draw the progress bar
         var progressWidth = (progress / totalProgress) * canvas.width;
-        ctx.fillStyle = "rgb(42, 118, 248)";
+
+        if (progress < 5)
+            {
+                ctx.fillStyle = "rgb(42, 118, 248)";
+            }
+
+        else
+            {
+                ctx.fillStyle = "rgb(0, 191, 35)";
+
+            }
+
         ctx.fillRect(0, 0, progressWidth, canvas.height);
     }
 
