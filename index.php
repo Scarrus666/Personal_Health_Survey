@@ -20,7 +20,9 @@
         include './header.php';
         // include './survey_start.php';
         // include './template-range-slider-draft.php';
-        include './template-radio-buttons.php';
+        // include './template-radio-buttons.php';
+        //include './template-checkboxes.php';
+        include './qquestion-template-switch';
     ?> 
 
     <?php

@@ -3,7 +3,6 @@
     include './tools.php';
 
     $data = nextQuestionData();
-
 ?>
 
 <div class="container">
@@ -36,7 +35,7 @@
 
         <h3><?php echo $data["question-text"]; ?></h3>
 
-        <form action="questions.php" method="post" onsubmit="return validateRadios('single-choice');">
+        <form action="question.php" method="post" onsubmit="return validateRadios('single-choice');">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="single-choice" id="single-choice-0" value="0">
                 <label class="form-check-label" for="single-choice-0">

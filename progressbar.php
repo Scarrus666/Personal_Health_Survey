@@ -57,15 +57,20 @@
         // Draw the progress bar
         var progressWidth = (progress / totalProgress) * canvas.width;
 
-        if (progress < 5)
+        if (progress < 3)
             {
-                ctx.fillStyle = "rgb(42, 118, 248)";
+                ctx.fillStyle = "rgb(252, 61, 3)";
+            }
+
+        else if(progress <7)
+            {
+                ctx.fillStyle = "rgb(252, 186, 3)";
+
             }
 
         else
             {
                 ctx.fillStyle = "rgb(0, 191, 35)";
-
             }
 
         ctx.fillRect(0, 0, progressWidth, canvas.height);

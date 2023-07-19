@@ -32,7 +32,7 @@ $questions = array(
     array(
         "question-text" => "What additional physical activity do you do most?",
         "type" => "checkbox",
-        "labels" => array("Lifting weights", "Walking", "Jogging", "Running", "Swimming", "Dancing", "Aerobics", "Pilates", "Team sports", "Other"),
+        "values" => array("Lifting weights", "Walking", "Jogging", "Running", "Swimming", "Dancing", "Aerobics", "Pilates", "Team sports", "Other"),
     ),
     array(
         "question-text" => "Do you feel you do too little, just enough or way too much additional physical activity?",
@@ -88,7 +88,7 @@ function nextQuestionData()
 
 
         // Setze die Laufnummer auf die nächste Frage.
-        $questionIndex = $questionIndex + 2;
+        $questionIndex = $questionIndex + 4;
 
 
         // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
