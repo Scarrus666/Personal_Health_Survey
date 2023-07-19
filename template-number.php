@@ -7,6 +7,7 @@
     $data = nextQuestionData();
 ?>
 
+
 <div class="container">
     <!-- Rest of the website content comes next -->
 
@@ -37,10 +38,11 @@
 
         <h3><?php echo $data["question-text"]; ?></h3>
 
-        <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateNumber();">
+        <form action="<?php echo $data["action"]; ?>" id="form" method="post" onsubmit="validateNumber()">
 
                 <input type="number" id="number" name="number"><br><br>
                 <label for="number"></label>
+                <div id="numberIncorrect" class="alert-message"></div><br>
 
 
             <input type="hidden" name="questionIndex" value='<?php echo $data["questionIndex"]; ?>'>
@@ -50,5 +52,18 @@
         </form>
 
     </div>
+
+    <script type="text/javascript">
+
+    function validateNumber()
+        {
+            if (document.getElementById("number").value < 0 || document.getElementById("number").value > 6)
+            {
+                event.preventDefault();
+                document.getElementById("numberIncorrect").innerHTML = "Please enter something realistic";
+            }
+        }
+
+    </script>
 
 </div>

@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['answers']))
     {
         $answers = $_SESSION['answers'];
-        array_push($answers, '')
+        array_push($answers, '');
     }
 
 else

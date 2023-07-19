@@ -358,3 +358,8 @@ input::-webkit-inner-spin-button
     margin-bottom: 5%;
 }
 
+.alert-message
+{
+    color: red;
+    font-size: bold;
+}
