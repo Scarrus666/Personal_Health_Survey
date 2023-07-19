@@ -41,7 +41,7 @@
         <br>
         
         <h3><?php echo $data["question-text"]; ?></h3>
-        <form action="question.php" method="post" onsubmit="return validateRange('range-slider');">
+        <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateRange('range-slider');">
             <p class="instruction"><?php echo $data["instruction"]; ?></p>
 
             <br>

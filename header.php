@@ -6,7 +6,7 @@
 
   <div class="nav-right">
       <a href="#">Previous</a>
-      <a href="#" class="active">Start Survey</a>
+      <a href="./index.php" class="active">Start Survey</a>
   </div>
   
 </div>

@@ -99,7 +99,9 @@ function nextQuestionData()
 
         // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
         $data = QUESTIONS[$questionIndex];
+        
         // prettyPrint($data);
+
         $data["questionIndex"] = $questionIndex;
 
         if ($questionIndex + 1 < count(QUESTIONS))
