@@ -18,7 +18,19 @@
         // include './data-collector.php';
         include './header.php';
 
-        // echo $_POST['response'];
+        /*
+
+        [code]$_SESSION[/code]You can use the ```
+        // On the first page
+        session_start();
+        $my_array = array("apple", "banana", "orange");
+        $_SESSION["my_array"] = $my_array;// On the second page
+        session_start();
+        $my_array = $_SESSION["my_array"];
+        print_r($my_array);
+
+        */
+
         $answers = array();
 
         include './question-template-switch.php';
