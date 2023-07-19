@@ -1,12 +1,13 @@
 html, body 
 {
+    font-size: 1em;
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
     height: 100%;
     display: flex;
     flex-direction: column;
-    font-size: calc(15px + 0.390625vw);
+    /* font-size: calc(15px + 0.390625vw); */
 }
 
 .header 
@@ -22,6 +23,7 @@ html, body
     max-height: 125px;
     min-height: 10%;
     width: 100%;
+    text-transform: lowercase;
 }
 
 .navbar 
@@ -38,6 +40,7 @@ html, body
     justify-content: flex-end;
     align-items:end;
     margin-right: 5%;
+    font-weight: bold;
 }
 
 .nav-right a 
@@ -47,11 +50,19 @@ html, body
     padding: 4.5px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-size: 1em;
 }
 
 .nav-right a:hover 
 {
-    background-color: rgb(138, 78, 0)
+    background-color: rgb(138, 78, 0);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.nav-right a:active
+{
+color: lightgray;
 }
 
 .container 
@@ -102,7 +113,7 @@ h1
     color: #fff;
     padding: 10px;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.75em;
     margin-bottom: -50px;
     width: 100%;
     max-height: 15%;
