@@ -20,8 +20,7 @@
         <?php prettyPrint($data); ?>
 
         <?php
-        
-            $questionPrint = $questionIndex + 1;
+            $questionPrint = $data["questionIndex"] + 1;
             echo "<h7>Question $questionPrint</h7>";
         ?>
 
@@ -37,7 +36,7 @@
 
         <h3><?php echo $data["question-text"]; ?></h3>
 
-        <form action="question.php" method="post" onsubmit="return validateRadios('single-choice');">
+        <form action="questions.php" method="post" onsubmit="return validateRadios('single-choice');">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="single-choice" id="single-choice-0" value="0">
                 <label class="form-check-label" for="single-choice-0">
@@ -80,7 +79,7 @@
             ctx.imageSmoothingEnabled = false;
 
             // Define progress variables
-            var progress = <?php echo "$questionIndex"; ?>;
+            var progress = <?php     echo $data["questionIndex"]; ?>;
             var totalProgress = 10;
 
             // Animate the progress bar

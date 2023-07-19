@@ -108,5 +108,7 @@ function nextQuestionData()
 
         // Gib die Daten zurück
         return $data;
+
     }
+
 ?>

@@ -9,7 +9,7 @@
     ctx.imageSmoothingEnabled = false;
 
     // Define progress variables
-    var progress = <?php echo "$questionIndex"; ?>;
+    var progress = <?php     echo $data["questionIndex"]; ?>;
     var totalProgress = 10;
 
     // Animate the progress bar
