@@ -18,7 +18,8 @@
         // include './data-collector.php';
         include './header.php';
 
-        echo $_POST['response'];
+        // echo $_POST['response'];
+        $answers = array();
 
         include './question-template-switch.php';
         include './progressbar.php';
