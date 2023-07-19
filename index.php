@@ -22,7 +22,7 @@
         // include './template-range-slider-draft.php';
         // include './template-radio-buttons.php';
         //include './template-checkboxes.php';
-        include './question-template-switch';
+        include './question-template-switch.php';
     ?> 
 
     <?php

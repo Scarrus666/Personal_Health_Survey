@@ -10,7 +10,7 @@
 
     // Define progress variables
     var progress = <?php     echo $data["questionIndex"] + 1; ?>;
-    var totalProgress = 10;
+    var totalProgress = 11;
 
     // Animate the progress bar
     function animateProgressBar() 
@@ -62,7 +62,7 @@
                 ctx.fillStyle = "rgb(252, 61, 3)";
             }
 
-        else if(progress <7)
+        else if(progress <9)
             {
                 ctx.fillStyle = "rgb(252, 186, 3)";
 

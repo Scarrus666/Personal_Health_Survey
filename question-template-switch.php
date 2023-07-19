@@ -3,7 +3,7 @@
 
     // Hole die Daten aus der Hauptliste ($questions array)
     $data = nextQuestionData();
-    // prettyPrint ($data): // DEVONLY
+    // prettyPrint ($data); // DEVONLY
 
     switch($data["type"])
         {

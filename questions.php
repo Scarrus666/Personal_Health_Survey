@@ -24,10 +24,13 @@ $questions = array(
     ),
     array(
         "question-text" => "How important is physical activity to you?",
+        "instruction" => null,
         "type" => "range",
         "labels" => array("Not at all", "a bit", "Very"),
         "min" => 0,
-        "max" => 5,
+        "max" => 4,
+        "step" => 1,
+        "value" => -1,
     ),
     array(
         "question-text" => "What additional physical activity do you do most?",
@@ -35,11 +38,14 @@ $questions = array(
         "values" => array("Lifting weights", "Walking", "Jogging", "Running", "Swimming", "Dancing", "Aerobics", "Pilates", "Team sports", "Other"),
     ),
     array(
-        "question-text" => "Do you feel you do too little, just enough or way too much additional physical activity?",
+        "question-text" => "Do you feel you do too little, just enough or too much additional physical activity?",
+        "instruction" => null,
         "type" => "range",
         "labels" => array("Far too little", "just right", "far too much"),
         "min" => 0,
-        "max" => 5,
+        "max" => 4,
+        "step" => 1,
+        "value" => -1,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain carbohydrates?",
@@ -88,7 +94,7 @@ function nextQuestionData()
 
 
         // Setze die Laufnummer auf die nächste Frage.
-        $questionIndex = $questionIndex + 4;
+        $questionIndex = $questionIndex + 1;
 
 
         // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
