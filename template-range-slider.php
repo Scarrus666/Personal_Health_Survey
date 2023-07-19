@@ -63,7 +63,7 @@
 
             <div class="slidecontainer">
             <?php echo $data["labels"][0]; ?>
-            <input type="range" name="response" id="range-slider" class="slider"
+            <input type="range" name="range-slider" id="range-slider" class="slider"
                     min="<?php echo $data["min"]; ?>"
                     max="<?php echo $data["max"]; ?>"
                     step="<?php echo $data["step"]; ?>"

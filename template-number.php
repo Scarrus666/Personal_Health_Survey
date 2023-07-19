@@ -39,7 +39,7 @@
 
         <form action="<?php echo $data["action"]; ?>" method="post" onsubmit="return validateNumber();">
 
-                <input type="number" id="number" name="response"><br><br>
+                <input type="number" id="number" name="number"><br><br>
                 <label for="number"></label>
 
 

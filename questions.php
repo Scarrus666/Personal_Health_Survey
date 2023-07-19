@@ -5,12 +5,6 @@
 // Start or resume the session
 // session_start();
 
-// Initialize an array to store the user's responses
-if (!isset($_SESSION['responses'])) 
-    {
-        $_SESSION['responses'] = array();
-    }
-
 // optionally you could also write:
 // define("QUESTIONS", array(
 // does the same thing as below
@@ -112,22 +106,6 @@ function nextQuestionData()
         // prettyPrint($data);
 
         $data["questionIndex"] = $questionIndex;
-        
-        // Here begins thy xCode
-        // Set the default field name for the response
-        $responseFieldName = 'response';
-        // Here ends the xCode
-
-        // Check if a response for the current question exists in the $_POST data
-        if (isset($_POST[$responseFieldName])) 
-            {
-                $response = $_POST[$responseFieldName];
-
-                // Save the user's response in the session
-                $_SESSION['responses'][$questionIndex] = $response;
-            }
-            
-        // Here ends thy xCode
 
 
         if ($questionIndex + 1 < count(QUESTIONS))

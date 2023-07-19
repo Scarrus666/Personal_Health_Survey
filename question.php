@@ -17,6 +17,9 @@
 
         // include './data-collector.php';
         include './header.php';
+
+        echo $_POST['response'];
+
         include './question-template-switch.php';
         include './progressbar.php';
         include './footer.php';
