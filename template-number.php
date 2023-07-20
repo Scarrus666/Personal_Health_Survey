@@ -1,8 +1,9 @@
 <?php
-    session_start();
 
     // include './questions.php';
-    include './tools.php';
+    // include './tools.php';
+    include './data-collector.php';
+
 
     $data = nextQuestionData();
 ?>
@@ -19,7 +20,7 @@
 
         <br><br>
 
-        <?php prettyPrint($data); ?>
+        <!-- <?php prettyPrint($data); ?> -->
 
         <?php
             $questionPrint = $data["questionIndex"] + 1;
@@ -63,12 +64,6 @@
                     event.preventDefault();
                     document.getElementById("errorMsg").innerHTML = "We are sorry, please try to introduce another number.";
                 }
-
-            else if (typeof number != 'number')
-            {
-                event.preventDefault();
-                document.getElementById("errorMsg").innerHTML = "We are sorry, please try to introduce a number.";
-            }
         }
 
     </script>

@@ -21,7 +21,6 @@
 
             case "number":
                 include "template-number.php";
-                break;
-            
+                break;          
         }
 ?>

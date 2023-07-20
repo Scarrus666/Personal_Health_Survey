@@ -31,8 +31,8 @@
 
         */
 
-        $answers = array();
-
+        // $answers = array();
+    
         include './question-template-switch.php';
         include './progressbar.php';
         include './footer.php';

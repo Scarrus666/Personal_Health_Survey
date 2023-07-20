@@ -1,8 +1,9 @@
 <?php
-    session_start();
 
     // include './questions.php';
-    include './tools.php';
+    // include './tools.php';
+    include './data-collector.php';
+
 
     $data = nextQuestionData();
 ?>
@@ -18,7 +19,7 @@
 
         <br><br>
 
-        <?php prettyPrint($data); ?>
+        <!-- <?php prettyPrint($data); ?> -->
 
         <?php
             $questionPrint = $data["questionIndex"] + 1;
