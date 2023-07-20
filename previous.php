@@ -10,11 +10,12 @@
     <title>Health Survey</title>
 </head>
 <body>
-
-    <?php
-        include './header.php'; 
-        include './question-template-switch.php';
-        include './progressbar.php';
-        include './footer.php';
-    ?>
+<?php
+    include './header.php';
+    //include './questions.php';
+    previousQuestionData();
+    include './question-template-switch.php';
+    include './progressbar.php';
+    include './footer.php';
+?>
 </body>

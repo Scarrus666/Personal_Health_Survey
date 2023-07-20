@@ -1,5 +1,5 @@
 <?php
-    include './questions.php';
+    //include './questions.php';
 
     // Hole die Daten aus der Hauptliste ($questions array)
     $data = nextQuestionData();
