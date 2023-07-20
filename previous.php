@@ -14,7 +14,7 @@
     include './header.php';
     //include './questions.php';
     previousQuestionData();
-    include './question-template-switch.php';
+    include './question.php';
     include './progressbar.php';
     include './footer.php';
 ?>

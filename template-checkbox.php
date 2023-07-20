@@ -58,27 +58,32 @@
     </div>
 
     <script>
-    function validateCheckboxes() {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        let isAtLeastOneChecked = false;
+    function validateCheckboxes() 
+        {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let isAtLeastOneChecked = false;
 
-        for (const checkbox of checkboxes) {
-            if (checkbox.checked) {
-                isAtLeastOneChecked = true;
-                break;
+            for (const checkbox of checkboxes) {
+                if (checkbox.checked) {
+                    isAtLeastOneChecked = true;
+                    break;
+                }
             }
-        }
 
-        if (!isAtLeastOneChecked) {
-            const validationWarning = document.getElementById('errorMsg');
-            validationWarning.textContent = 'Please select at least one option.';
-            return false; // Prevent form submission
-        } else {
-            const validationWarning = document.getElementById('errorMsg');
-            validationWarning.textContent = null;
-            return true; // Allow form submission
+            if (!isAtLeastOneChecked) 
+                {
+                    const validationWarning = document.getElementById('errorMsg');
+                    validationWarning.textContent = 'Please select at least one option.';
+                    return false; // Prevent form submission
+                } 
+            
+            else 
+                {
+                    const validationWarning = document.getElementById('errorMsg');
+                    validationWarning.textContent = null;
+                    return true; // Allow form submission
+                }
         }
-    }
 </script>
 
 </div>

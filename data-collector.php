@@ -38,7 +38,7 @@ Muss session start() vor dem Gebrauch von $ SESSION ausgeführt werden. Am Beste
 Auf der index.php-Seite wird die Session zurückgesetzt und frisch gestartet, damit die Umfrage von Vorne wiederholt werden kann.
 */
 
-session_start();
+// session_start();
 
 if (str_contains ($_SERVER['SCRIPT_NAME'], "index.php")) 
     {

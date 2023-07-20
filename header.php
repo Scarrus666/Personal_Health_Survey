@@ -1,4 +1,5 @@
 <?php
+session_start();
   include './questions.php'
 ?>
 
@@ -9,7 +10,7 @@
   <!-- <h1 class="header-title">Nutritional Advice</h1> -->
 
   <div class="nav-right">
-      <a href="./previous.php">Previous</a>
+      <a onclick="history.go(-1)">Previous</a>
       <a href="./index.php" class="active">Start Survey</a>
   </div>
   

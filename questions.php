@@ -15,10 +15,10 @@ $questions = array(
         "instruction" => "Rate your overall physical health",
         "type" => "range",
         "labels" => array("Not at all healthy", /*"OK-ish",*/ "Extremely healthy"),
-        "min" => 0,
-        "max" => 4,
+        "min" => -2,
+        "max" => 2,
         "step" => 1,
-        "value" => -1,
+        "value" => -2,
     ),
     array(
         "question-text" => "Do you take nutritional supplements?",
@@ -29,11 +29,11 @@ $questions = array(
         "question-text" => "How important is physical activity to you?",
         "instruction" => null,
         "type" => "range",
-        "labels" => array("Not at all", "a bit", "Very"),
-        "min" => 0,
-        "max" => 4,
+        "labels" => array("Not at all", /*"a bit",*/ "Very"),
+        "min" => -2,
+        "max" => 2,
         "step" => 1,
-        "value" => -1,
+        "value" => -2,
     ),
     array(
         "question-text" => "What additional physical activity do you do most?",
@@ -45,10 +45,10 @@ $questions = array(
         "instruction" => null,
         "type" => "range",
         "labels" => array("Far too little", "just right", "far too much"),
-        "min" => 0,
-        "max" => 4,
+        "min" => -2,
+        "max" => 2,
         "step" => 1,
-        "value" => -1,
+        "value" => -2,
     ),
     array(
         "question-text" => "On a typical day, how many of your meals or snacks contain carbohydrates?",
@@ -128,6 +128,7 @@ function nextQuestionData()
 
     }
 
+    // FOR THE UNUSED previous.php PHP FUNCTION TO GO BACK 1 PAGE
     function previousQuestionData()
     {
         // Hole die Laufnummer der letzten Frage aus $_POST.
@@ -135,31 +136,21 @@ function nextQuestionData()
         // im <form> Tag
 
         if (isset($_POST["questionIndex"]))
-        {
-            $questionIndex = $_POST["questionIndex"];
-
-        }
+            {
+                $questionIndex = 7;
+                //$questionIndex --;
+                $data["questionIndex"] = $questionIndex;
+                $data["action"] =  "./question-template-switch.php";
+            }
         else
-        {
-            // Auf der index.php Seite gibt es noch keine $_POST Werte.
-            $questionIndex = -1;
-        }
-
-
-        // Setze die Laufnummer auf die nächste Frage.
-        $questionIndex = $questionIndex -1;
-
-
-        // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
-        // $data = QUESTIONS[$questionIndex];
-
-        // prettyPrint($data);
-
-        $data["questionIndex"] = $questionIndex;
-        $data["action"] =  "./question.php";
+            {
+                // Auf der index.php Seite gibt es noch keine $_POST Werte.
+                $questionIndex = 5;
+                $data["questionIndex"] = $questionIndex;
+                $data["action"] =  "./question-template-switch.php";
+            }
 
         return $data;
-
     }
 
 ?>

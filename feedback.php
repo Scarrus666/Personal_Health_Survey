@@ -12,8 +12,11 @@
 <body>
 <?php
     include './header.php';
-    // include './progressbar_done.php';
     include './data-collector.php';
+
+    // sets the Progressbar to done !!!WORKS ONLY WITH progressbar.php NOT WITH progressbar_done.php!!!
+    // $data["questionIndex"] = 11;
+
     // include './evaluate-user-input.php';
 ?>
 
@@ -21,6 +24,12 @@
     <!-- Rest of the website content comes next -->
 
     <h1>Please take a Quiz</h1>
+
+    <?php
+    // DEVONLY: Gib die aktuelle $ SESSION in die Seite aus.
+    prettyPrint($_SERVER['SCRIPT_NAME']);
+    prettyPrint($_SESSION);
+    ?>
 
     <img class="image" src="./images/health.jpg" alt="health.jpg">
 
@@ -45,39 +54,210 @@
 
         <?php
             // Code Alex
-            //Session(HauptArray) wird zu einer Variable zugeteilt
+            //Session(hauptArray) wird zu einer Variable zugeteilt
             $session = $_SESSION;
+
+            // Die Variablen für die Teilpunktzahlen
+            $partNumbers1 = 0;
+            $partNumbers2 = 0;
 
             // Die Variable für die Gesamtpunktzahl
             $totalNumbers = 0;
 
             // Geht durch jeden (haupt)Array(Block) durch
             foreach ($session as $array)
-            {
-                // Holt aus dem (second, subsidiären)Array die Werte raus
-                foreach($array as $key => $value)
+                {
+                    // Holt aus dem (second, subsidiären)Array die Werte raus
+                    foreach ($array as $key => $value)
+                        {
+                            // Gibt alle Werte raus
+                            // echo $value;
+
+                            // Ist der Wert eine Nummer und nicht unter questionIndex(im subArray)
+                            if (is_numeric($value) && $key != "questionIndex" && $array['questionIndex'] < 5)
+                                {
+                                    // Wird der Wert zur 1sten Teilpunktzahl hinzugefügt
+                                    $partNumbers1 += $value;
+                                }
+
+                            // ANSONSTEN ist der Wert ein String und (wieder) nicht unter questionIndex(im aubArray)
+                            elseif (is_string($value) && $key != "questionIndex")
+                                {
+                                    // Addiere 1 zur 2ten Teilpunktzahl
+                                    $partNumbers1++;
+                                }
+                        } 
+                }
+
+            foreach ($session as $array)
+                {
+
+                    foreach ($array as $key => $value)
+                        {
+                            if ($key != "questionIndex" && $array['questionIndex'] = 5)
+                            {
+                                if ($value <= 2)
+                                    {
+                                        $partNumbers2++;
+                                    }
+
+                                else
+                                    {
+                                        $partNumbers2--;
+                                    }
+                            }
+
+                            if ($key != "questionIndex" && $array['questionIndex'] = 6)
+                            {
+                                if ($value < 1 || $value > 4)
+                                    {
+                                        $partNumbers2--;
+                                    }
+
+                                else
+                                    {
+                                        $partNumbers2++;
+                                    }
+
+                                if ($key != "questionIndex" && $array['questionIndex'] = 7)
+                                {
+                                    if ($value < 2)
+                                        {
+                                            $partNumbers2--;
+                                        }
+    
+                                    else
+                                        {
+                                            $partNumbers2++;
+                                        }
+                                }
+
+                                if ($key != "questionIndex" && $array['questionIndex'] = 8)
+                                {
+                                    if ($value < 2)
+                                        {
+                                            $partNumbers2--;
+                                        }
+    
+                                    else
+                                        {
+                                            $partNumbers2++;
+                                        }
+
+                                if ($key != "questionIndex" && $array['questionIndex'] = 9)
+                                {
+                                    if ($value <= 2)
+                                        {
+                                            $partNumbers2++;
+                                        }
+    
+                                    else
+                                        {
+                                            $partNumbers2--;
+                                        }
+                                }
+                                }
+                            }
+                        }
+
+
+
+                   /* if ($array['questionIndex'] = 5)
                     {
-                        // Gibt alle Werte raus
-                        // echo $value;
-
-                        // Ist der Wert eine Nummer und nicht unter questionIndex(im subArray)
-                        if (is_numeric($value) && $key != "questionIndex")
+                        if ($array['number'] <= 2)
                             {
-                                // Wird der Wert zu der Gesamtpunktzahl hinzugefügt
-                                $totalNumbers += $value;
+                                $partNumbers2++;
                             }
-
-                        // ANSONSTEN ist der Wert ein String und (wieder) nicht unter questionIndex(im aubArray)
-                        elseif (is_string($value) && $key != "questionIndex")
+                        
+                        else
                             {
-                                // Addiere eine 1 zur Gesamtpunktzahl
-                                $totalNumbers++;
-                            }
+                                $partNumbers2--;
+                            }                      
                     }
-            }
+
+                    if ($array['questionIndex'] = 6)
+                    {
+                        if ($array['number'] < 1 || $array['number'] > 4)
+                            {
+                                $partNumbers2--;
+                            }
+                        
+                        else 
+                            {
+                                $partNumbers2++;
+                            }                      
+                    }
+
+                    if ($array['questionIndex'] = 7)
+                    {
+                        if ($array['number'] < 2)
+                            {
+                                $partNumbers2--;
+                            }
+                        
+                        else
+                            {
+                                $partNumbers2++;
+                            }                      
+                    }
+
+                    if ($array['questionIndex'] = 8)
+                    {
+                        if ($array['number'] < 2)
+                            {
+                                $partNumbers2--;
+                            }
+                        
+                        else
+                            {
+                                $partNumbers2++;
+                            }                      
+                    }
+
+                    if ($array['questionIndex'] = 9)
+                    {
+                        if ($array['number'] < 2)
+                            {
+                                $partNumbers2++;
+                            }
+                        
+                        else
+                            {
+                                $partNumbers2--;
+                            }                      
+                    } */
+                }
+
+
+/*             while ($session["questionIndex"] <= 5)
+                    {
+                        foreach ($array as $key => $value)
+                        {
+                            // Gibt alle Werte raus
+                            // echo $value;
+    
+                            // Ist der Wert eine Nummer und nicht unter questionIndex(im subArray)
+                            if (is_numeric($value) && $key != "questionIndex")
+                                {
+                                    // Wird der Wert zu der Gesamtpunktzahl hinzugefügt
+                                    $totalNumbers += $value;
+                                }
+    
+                            // ANSONSTEN ist der Wert ein String und (wieder) nicht unter questionIndex(im aubArray)
+                            elseif (is_string($value) && $key != "questionIndex")
+                                {
+                                    // Addiere eine 1 zur Gesamtpunktzahl
+                                    $totalNumbers++;
+                                }
+                        }
+                    } */
+
+
             // End of Code Alex
 
             // echo "<br>" . $totalNumbers;
+
+            $totalNumbers = $partNumbers1 + $partNumbers2;
 
             echo "<p class='final-feedback'>" . "You made $totalNumbers points in total. ";
             
