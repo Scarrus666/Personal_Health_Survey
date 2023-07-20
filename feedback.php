@@ -12,9 +12,9 @@
 <body>
 <?php
     include './header.php';
+    // include './progressbar_done.php';
     include './data-collector.php';
     // include './evaluate-user-input.php';
-    include './progressbar.php';
 ?>
 
 <div class="container">
@@ -25,17 +25,11 @@
     <img class="image" src="./images/health.jpg" alt="health.jpg">
 
     <div class="question">
-        <h4>Please take the time for our short Quiz.</h4>
-        <p>It will help you evaluate your current and future health condition.</p>
 
-        <br><br>
+        <br>
 
-        <!-- <?php prettyPrint($data); ?> -->
+        <h3>Thank you for participating</h3>
 
-        <?php
-            $questionPrint = $data["questionIndex"] + 1;
-            echo "<h5>Question $questionPrint</h5>";
-        ?>
 
         <div class="bar">
             <!--
@@ -47,68 +41,71 @@
             <canvas id="progressCanvas"></canvas>
         </div>
 
-    <h7>Feedback</h7>
-    <h3>Danke für's Mitmachen</h3>
+        <br>
 
-    <?php
-        //Session(HauptArray) wird zu einer Variable zugeteilt
-        $session = $_SESSION;
+        <?php
+            // Code Alex
+            //Session(HauptArray) wird zu einer Variable zugeteilt
+            $session = $_SESSION;
 
-        // Die Variable für die Gesamtpunktzahl
-        $totalNumbers = 0;
+            // Die Variable für die Gesamtpunktzahl
+            $totalNumbers = 0;
 
-        // Geht durch jeden (haupt)Array(Block) durch
-        foreach ($session as $array)
-        {
-            // Holt aus dem (second, subsidiären)Array die Werte raus
-            foreach($array as $key => $value)
+            // Geht durch jeden (haupt)Array(Block) durch
+            foreach ($session as $array)
+            {
+                // Holt aus dem (second, subsidiären)Array die Werte raus
+                foreach($array as $key => $value)
+                    {
+                        // Gibt alle Werte raus
+                        // echo $value;
+
+                        // Ist der Wert eine Nummer und nicht unter questionIndex(im subArray)
+                        if (is_numeric($value) && $key != "questionIndex")
+                            {
+                                // Wird der Wert zu der Gesamtpunktzahl hinzugefügt
+                                $totalNumbers += $value;
+                            }
+
+                        // ANSONSTEN ist der Wert ein String und (wieder) nicht unter questionIndex(im aubArray)
+                        elseif (is_string($value) && $key != "questionIndex")
+                            {
+                                // Addiere eine 1 zur Gesamtpunktzahl
+                                $totalNumbers++;
+                            }
+                    }
+            }
+            // End of Code Alex
+
+            // echo "<br>" . $totalNumbers;
+
+            echo "<p class='final-feedback'>" . "You made $totalNumbers points in total. ";
+            
+            if ($totalNumbers < 12)
                 {
-                    // Gibt alle Werte raus
-                    echo $value;
-
-                    // Ist der Wert eine Nummer und nicht unter questionIndex(im subArray)
-                    if (is_numeric($value) && $key != "questionIndex")
-                        {
-                            // Wird der Wert zu der Gesamtpunktzahl hinzugefügt
-                            $totalNumbers += $value;
-                        }
-
-                    // ANSONSTEN ist der Wert ein String und (wieder) nicht unter questionIndex(im aubArray)
-                    elseif (is_string($value) && $key != "questionIndex")
-                        {
-                            // Addiere eine 1 zur Gesamtpunktzahl
-                            $totalNumbers++;
-                        }
+                    echo "Please pay more attention to your health!" . "</p>";
                 }
-        }
 
-        echo "<br>" . $totalNumbers;
+            elseif ($totalNumbers < 24)
+                {
+                    echo "You seem to be ok but you could be doing more for your health." . "</p>";
+                }
 
-        echo "<p></p>";
-        echo "<p class='final-feedback'>" . "Du hast $totalPoints von 33 Punkten erreicht." . "</p>";
-        
-        if ($totalPoints < 12)
-            {
-                echo "<p class='final-feedback'>" . "Bitte kümmere dich mehr um deine Gesundheit!" . "</p>";
-            }
+            else
+                {
+                    echo "Congratulations, you are very fit!" . "</p>";
+                }
 
-        elseif ($totalPoints < 24)
-            {
-                echo "<p class='final-feedback'>" . "Du scheinst ok zu sein, könntest aber noch mehr für deine Gesundheit tun." . "</p>";
-            }
+            echo "<p><br></p>";
+        ?>
 
-        else
-            {
-                echo "<p class='final-feedback'>" . "Gratuliere, du bist sehr fit!" . "</p>";
-            }
+        <button type="button" class="btn btn-primary" onclick="document.location='/index.php'">Repeat</button>
+        <p class="spacer"></p>
 
-        echo "<p></p>";
-    ?>
-
-    <button type="button" class="btn btn-primary" onclick="document.location='/index.php'">Repeat</button>
-    <p class="spacer"></p>
-    <!-- END OF CONTENT -->
+    </div>
+</div>
 
 <?php
+    include './progressbar_done.php';
     include './footer.php';
 ?>
