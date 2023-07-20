@@ -95,137 +95,71 @@
                     foreach ($array as $key => $value)
                         {
                             if ($key != "questionIndex" && $array['questionIndex'] = 5)
-                            {
-                                if ($value <= 2)
-                                    {
-                                        $partNumbers2++;
-                                    }
-
-                                else
-                                    {
-                                        $partNumbers2--;
-                                    }
-                            }
-
-                            if ($key != "questionIndex" && $array['questionIndex'] = 6)
-                            {
-                                if ($value < 1 || $value > 4)
-                                    {
-                                        $partNumbers2--;
-                                    }
-
-                                else
-                                    {
-                                        $partNumbers2++;
-                                    }
-
-                                if ($key != "questionIndex" && $array['questionIndex'] = 7)
-                                {
-                                    if ($value < 2)
-                                        {
-                                            $partNumbers2--;
-                                        }
-    
-                                    else
-                                        {
-                                            $partNumbers2++;
-                                        }
-                                }
-
-                                if ($key != "questionIndex" && $array['questionIndex'] = 8)
-                                {
-                                    if ($value < 2)
-                                        {
-                                            $partNumbers2--;
-                                        }
-    
-                                    else
-                                        {
-                                            $partNumbers2++;
-                                        }
-
-                                if ($key != "questionIndex" && $array['questionIndex'] = 9)
                                 {
                                     if ($value <= 2)
                                         {
                                             $partNumbers2++;
                                         }
-    
+
                                     else
                                         {
                                             $partNumbers2--;
                                         }
                                 }
+
+                            if ($key != "questionIndex" && $array['questionIndex'] = 6)
+                                {
+                                    if ($value < 1 || $value > 4)
+                                        {
+                                            $partNumbers2--;
+                                        }
+
+                                    else
+                                        {
+                                            $partNumbers2++;
+                                        }
+
+                                    if ($key != "questionIndex" && $array['questionIndex'] = 7)
+                                        {
+                                            if ($value < 2)
+                                                {
+                                                    $partNumbers2--;
+                                                }
+            
+                                            else
+                                                {
+                                                    $partNumbers2++;
+                                                }
+                                        }
+
+                                    if ($key != "questionIndex" && $array['questionIndex'] = 8)
+                                        {
+                                            if ($value < 2)
+                                                {
+                                                    $partNumbers2--;
+                                                }
+            
+                                            else
+                                                {
+                                                    $partNumbers2++;
+                                                }
+                                        }
+
+                                    if ($key != "questionIndex" && $array['questionIndex'] = 9)
+                                        {
+                                            if ($value <= 2)
+                                                {
+                                                    $partNumbers2++;
+                                                }
+            
+                                            else
+                                                {
+                                                    $partNumbers2--;
+                                                }
+                                        }
+                                    
                                 }
-                            }
                         }
-
-
-
-                   /* if ($array['questionIndex'] = 5)
-                    {
-                        if ($array['number'] <= 2)
-                            {
-                                $partNumbers2++;
-                            }
-                        
-                        else
-                            {
-                                $partNumbers2--;
-                            }                      
-                    }
-
-                    if ($array['questionIndex'] = 6)
-                    {
-                        if ($array['number'] < 1 || $array['number'] > 4)
-                            {
-                                $partNumbers2--;
-                            }
-                        
-                        else 
-                            {
-                                $partNumbers2++;
-                            }                      
-                    }
-
-                    if ($array['questionIndex'] = 7)
-                    {
-                        if ($array['number'] < 2)
-                            {
-                                $partNumbers2--;
-                            }
-                        
-                        else
-                            {
-                                $partNumbers2++;
-                            }                      
-                    }
-
-                    if ($array['questionIndex'] = 8)
-                    {
-                        if ($array['number'] < 2)
-                            {
-                                $partNumbers2--;
-                            }
-                        
-                        else
-                            {
-                                $partNumbers2++;
-                            }                      
-                    }
-
-                    if ($array['questionIndex'] = 9)
-                    {
-                        if ($array['number'] < 2)
-                            {
-                                $partNumbers2++;
-                            }
-                        
-                        else
-                            {
-                                $partNumbers2--;
-                            }                      
-                    } */
                 }
 
 
