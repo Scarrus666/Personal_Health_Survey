@@ -91,22 +91,25 @@ function nextQuestionData()
         if (isset($_POST["questionIndex"]))
         {
             $questionIndex = $_POST["questionIndex"];
+            $questionIndex = $questionIndex + 1;
 
         }
         else
         {
             // Auf der index.php Seite gibt es noch keine $_POST Werte.
-            $questionIndex = -1;
+            $questionIndex = 0;
 
         }
 
+        $_SESSION["questionIndex"] = $questionIndex;
+
 
         // Setze die Laufnummer auf die nächste Frage.
-        $questionIndex = $questionIndex + 1;
-
+        // $questionIndex = $questionIndex + 1;
 
         // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
         $data = QUESTIONS[$questionIndex];
+
 
         // prettyPrint($data);
 
@@ -128,6 +131,7 @@ function nextQuestionData()
 
     }
 
+
     // FOR THE UNUSED previous.php PHP FUNCTION TO GO BACK 1 PAGE
     function previousQuestionData()
     {
@@ -135,22 +139,71 @@ function nextQuestionData()
         // Benötigt <input type="hidden" name="questionIndex" value="0">
         // im <form> Tag
 
-        if (isset($_POST["questionIndex"]))
+/*         if (isset($data["questionIndex"]))
             {
-                $questionIndex = 7;
-                //$questionIndex --;
+                $questionIndex = $data["questionIndex"];
+                $questionIndex--;
                 $data["questionIndex"] = $questionIndex;
                 $data["action"] =  "./question-template-switch.php";
             }
+            
         else
             {
                 // Auf der index.php Seite gibt es noch keine $_POST Werte.
-                $questionIndex = 5;
-                $data["questionIndex"] = $questionIndex;
-                $data["action"] =  "./question-template-switch.php";
+                // $questionIndex = -1;
+                // $data["questionIndex"] = $questionIndex;
+                // $data["action"] =  "./question-template-switch.php";
+                null;
             }
 
         return $data;
+    } */
+
+    if (isset($_SESSION["questionIndex"]))
+    {
+        $questionIndex = $_SESSION["questionIndex"];
+
     }
+    else
+    {
+        // Auf der index.php Seite gibt es noch keine $_POST Werte.
+        //$questionIndex = -1;
+        null;
+
+    }
+
+    $questionIndex--;
+
+    $data = QUESTIONS[$questionIndex];
+
+
+    return $data;
+
+
+
+    
+
+    /* CHATGPT VERSION WHICH ALSO RETURNS TO THE STARTING PAGE 
+        function previousQuestionData()
+    {
+        // Decrement the question index to go back to the previous question
+        if (isset($_POST["questionIndex"])) {
+            $questionIndex = $_POST["questionIndex"] - 1;
+        } else {
+            // If there's no question index in the session (e.g., first question), set it to a valid question index
+            $questionIndex = 0;
+        }
+
+        // Retrieve the data of the previous question from the QUESTIONS array
+        $data = QUESTIONS[$questionIndex];
+
+        // Set the updated question index and action URL to go back
+        $data["questionIndex"] = $questionIndex;
+        $data["action"] = "./question.php";
+
+        return $data;
+    }
+    */
+}
 
 ?>

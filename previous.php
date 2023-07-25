@@ -11,11 +11,13 @@
 </head>
 <body>
 <?php
-    include './header.php';
+    //include './header.php';
     //include './questions.php';
-    previousQuestionData();
+    //previousQuestionData();
     include './question.php';
+    // $data = previousQuestionData();
     include './progressbar.php';
     include './footer.php';
+
 ?>
 </body>
