@@ -92,13 +92,11 @@ function nextQuestionData()
         {
             $questionIndex = $_POST["questionIndex"];
             $questionIndex = $questionIndex + 1;
-
         }
         else
         {
             // Auf der index.php Seite gibt es noch keine $_POST Werte.
             $questionIndex = 0;
-
         }
 
         $_SESSION["questionIndex"] = $questionIndex;
@@ -128,7 +126,6 @@ function nextQuestionData()
 
         // Gib die Daten zurück
         return $data;
-
     }
 
 

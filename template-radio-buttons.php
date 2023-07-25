@@ -25,18 +25,8 @@
             echo "<h7>Question $questionPrint</h7>";
 
             // DEVONLY: Gib die aktuelle $ SESSION in die Seite aus.
-            prettyPrint($_SERVER['SCRIPT_NAME']);
-            prettyPrint($_SESSION);
-
-            if (isset($_POST["questionIndex"]))
-            {
-                echo "The index of the question is: " . $_POST["questionIndex"];        
-            }
-
-            else
-            {
-                echo "questionIndex is not set!";
-            }
+            // prettyPrint($_SERVER['SCRIPT_NAME']);
+            // prettyPrint($_SESSION);
         ?>
 
         <div class="bar">
