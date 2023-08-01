@@ -26,8 +26,8 @@
             echo "<h7>Question $questionPrint</h7>";
 
             // DEVONLY: Gib die aktuelle $ SESSION in die Seite aus.
-            // prettyPrint($_SERVER['SCRIPT_NAME']);
-            // prettyPrint($_SESSION);
+            prettyPrint($_SERVER['SCRIPT_NAME']);
+            prettyPrint($_SESSION);
         ?>
 
         <div class="bar">

@@ -91,23 +91,22 @@ function nextQuestionData()
         if (isset($_POST["questionIndex"]))
         {
             $questionIndex = $_POST["questionIndex"];
-            $questionIndex = $questionIndex + 1;
+
         }
         else
         {
             // Auf der index.php Seite gibt es noch keine $_POST Werte.
-            $questionIndex = 0;
-        }
+            $questionIndex = -1;
 
-        $_SESSION["questionIndex"] = $questionIndex;
+        }
 
 
         // Setze die Laufnummer auf die nächste Frage.
-        // $questionIndex = $questionIndex + 1;
+        $questionIndex = $questionIndex + 1;
+
 
         // Hole die Daten der Frage aus der Hauptliste (QUESTIONS array).
         $data = QUESTIONS[$questionIndex];
-
 
         // prettyPrint($data);
 
@@ -126,9 +125,10 @@ function nextQuestionData()
 
         // Gib die Daten zurück
         return $data;
+
     }
 
-
+    /*
     // FOR THE UNUSED previous.php PHP FUNCTION TO GO BACK 1 PAGE
     function previousQuestionData()
     {
@@ -136,51 +136,25 @@ function nextQuestionData()
         // Benötigt <input type="hidden" name="questionIndex" value="0">
         // im <form> Tag
 
-/*         if (isset($data["questionIndex"]))
+        if (isset($_POST["questionIndex"]))
             {
-                $questionIndex = $data["questionIndex"];
-                $questionIndex--;
+                $questionIndex = $questionIndex;
+                $questionIndex --;
                 $data["questionIndex"] = $questionIndex;
                 $data["action"] =  "./question-template-switch.php";
             }
-            
         else
             {
                 // Auf der index.php Seite gibt es noch keine $_POST Werte.
-                // $questionIndex = -1;
-                // $data["questionIndex"] = $questionIndex;
-                // $data["action"] =  "./question-template-switch.php";
-                null;
+                $questionIndex = -1;
+                $data["questionIndex"] = $questionIndex;
+                $data["action"] =  "./question-template-switch.php";
             }
 
         return $data;
-    } */
-
-    if (isset($_SESSION["questionIndex"]))
-    {
-        $questionIndex = $_SESSION["questionIndex"];
-
     }
-    else
-    {
-        // Auf der index.php Seite gibt es noch keine $_POST Werte.
-        //$questionIndex = -1;
-        null;
+    */
 
-    }
-
-    $questionIndex--;
-
-    $data = QUESTIONS[$questionIndex];
-
-
-    return $data;
-
-
-
-    
-
-    /* CHATGPT VERSION WHICH ALSO RETURNS TO THE STARTING PAGE 
         function previousQuestionData()
     {
         // Decrement the question index to go back to the previous question
@@ -200,7 +174,5 @@ function nextQuestionData()
 
         return $data;
     }
-    */
-}
 
 ?>

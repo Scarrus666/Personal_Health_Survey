@@ -27,8 +27,8 @@
 
     <?php
     // DEVONLY: Gib die aktuelle $ SESSION in die Seite aus.
-    // prettyPrint($_SERVER['SCRIPT_NAME']);
-    // prettyPrint($_SESSION);
+    prettyPrint($_SERVER['SCRIPT_NAME']);
+    prettyPrint($_SESSION);
     ?>
 
     <img class="image" src="./images/health.jpg" alt="health.jpg">
